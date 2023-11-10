@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 3000;
 const router = require('./routes');
 
 connnectToDB();
-
+app.use(express.json());
 app.use(router);
 
 app.listen(PORT, () => {
