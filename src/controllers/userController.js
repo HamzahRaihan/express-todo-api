@@ -81,4 +81,40 @@ const register = async (req, res) => {
   }
 };
 
-module.exports = { getAllUsers, register, login };
+const editUser = async (req, res) => {
+  try {
+    const id = req.params.id;
+    const data = req.body;
+    const user = await Users.findOne({ _id: id });
+    console.log('🚀 ~ file: userController.js:89 ~ editUser ~ user:', user);
+    let saltRounds = 10;
+
+    const hashPassword = await new Promise((resolve, reject) => {
+      bcrypt.hash(data.password, saltRounds, (err, hash) => {
+        if (err) {
+          reject(err);
+        } else {
+          resolve(hash);
+        }
+      });
+    });
+
+    const editedUser = {
+      name: data.name,
+      email: data.email,
+      password: hashPassword,
+    };
+    const edited = await user.updateOne(editedUser);
+
+    res.status(201).json({
+      message: 'User has succesfully made a change',
+      edited,
+    });
+  } catch (error) {
+    res.status(404).json({
+      message: 'Internal Error',
+    });
+  }
+};
+
+module.exports = { getAllUsers, register, login, editUser };
