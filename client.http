@@ -14,6 +14,12 @@ Content-Type: application/json
   "password": "123456780"
 }
 
+# {
+#   "name": "Ronaldi Jackson",
+#   "email": "ronald@gmail.com",
+#   "password": "123456780"
+# }
+
 ###
 
 POST http://localhost:3000/auth/login
@@ -22,5 +28,22 @@ Content-Type: application/json
 {
   "name": "Hamzah Raihan",
   "email": "hamzah@gmail.com",
-  "password": "123456780"
+  "password": "johncena123"
+}
+
+# {
+#   "name": "Ronaldi Jackson",
+#   "email": "ronald@gmail.com",
+#   "password": "123456780"
+# }
+
+###
+
+PUT http://localhost:3000/users/654e2fa56941e1e7af6b1e02
+Content-Type: application/json
+
+{
+  "name": "Hamzah Raihan",
+  "email": "hamzah@gmail.com",
+  "password": "johncena123"
 }
