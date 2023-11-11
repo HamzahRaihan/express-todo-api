@@ -1,8 +1,8 @@
+### Get all todos
 GET http://localhost:3000/todos
 Content-Type: application/json
 
-###
-
+### Post Todo
 POST http://localhost:3000/todos
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhhbXphaEBnbWFpbC5jb20iLCJpZCI6IjY1NGUyZmE1Njk0MWUxZTdhZjZiMWUwMiIsImlhdCI6MTY5OTY5MDU0OSwiZXhwIjoxNjk5Njk0MTQ5fQ.JPP4feH3_aGZThInBQOCOII8_7tOWIVCQI_ufyl0BDE
 Content-Type: application/json
@@ -13,12 +13,12 @@ Content-Type: application/json
   "userId": "654e2fa56941e1e7af6b1e02"
 }
 
-###
+### Get todo by id
 GET http://localhost:3000/todos/654f386d87666723fedbc854
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhhbXphaEBnbWFpbC5jb20iLCJpZCI6IjY1NGUyZmE1Njk0MWUxZTdhZjZiMWUwMiIsImlhdCI6MTY5OTY5MDU0OSwiZXhwIjoxNjk5Njk0MTQ5fQ.JPP4feH3_aGZThInBQOCOII8_7tOWIVCQI_ufyl0BDE
 Content-Type: application/json
 
-###
+### Edit Todo
 PUT http://localhost:3000/todos/654f29eb3636cb1d92125a71
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhhbXphaEBnbWFpbC5jb20iLCJpZCI6IjY1NGUyZmE1Njk0MWUxZTdhZjZiMWUwMiIsImlhdCI6MTY5OTY5MDU0OSwiZXhwIjoxNjk5Njk0MTQ5fQ.JPP4feH3_aGZThInBQOCOII8_7tOWIVCQI_ufyl0BDE
 Content-Type: application/json
@@ -27,3 +27,8 @@ Content-Type: application/json
   "todo": "Halo edited",
   "isComplete": true
 }
+
+### Delete Todo
+DELETE  http://localhost:3000/todos/654f4b44f1287bcfc2f375d8
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRlbGlpbmRpYUBnbWFpbC5jb20iLCJpZCI6IjY1NGYzZGI4Mzg5MGMzYTQ5ZGM3YjJiOCIsImlhdCI6MTY5OTcwMzU2MywiZXhwIjoxNjk5Nzg5OTYzfQ.WILJLKOkRqEpqdnmeb-BTe3T3A8NFltA71cQLN1L_aI
+Content-Type: application/json

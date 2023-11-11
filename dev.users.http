@@ -4,12 +4,12 @@ Content-Type: application/json
 
 ### Get User by ID
 GET  http://localhost:3000/users/654e4014373a7a95337beff3
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRlbGlpbmRpYUBnbWFpbC5jb20iLCJpZCI6IjY1NGYzZGI4Mzg5MGMzYTQ5ZGM3YjJiOCIsImlhdCI6MTY5OTcwNDQ1OSwiZXhwIjoxNjk5NzkwODU5fQ._VMyOePYNy0nVOCAXtVJpRNwtbcpWJpivGYwP51cESo
 Content-Type: application/json
 
 ### Register
 POST  http://localhost:3000/users
 Content-Type: application/json
-
 #condition: email must unique and password must be more than 8 length
 
 {
@@ -56,3 +56,8 @@ Content-Type: application/json
   "email": "hamzah@gmail.com",
   "password": "hamzahraihanpassword"
 }
+
+### Delete user data
+DELETE  http://localhost:3000/users/654f3db83890c3a49dc7b2b8
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRlbGlpbmRpYUBnbWFpbC5jb20iLCJpZCI6IjY1NGYzZGI4Mzg5MGMzYTQ5ZGM3YjJiOCIsImlhdCI6MTY5OTcwNDQ1OSwiZXhwIjoxNjk5NzkwODU5fQ._VMyOePYNy0nVOCAXtVJpRNwtbcpWJpivGYwP51cESo
+Content-Type: application/json

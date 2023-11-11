@@ -56,3 +56,8 @@ Content-Type: application/json
   "email": "hamzah@gmail.com",
   "password": "hamzahraihanpassword"
 }
+
+### Delete user data
+DELETE https://express-todo-api-eta.vercel.app/users/654f3db83890c3a49dc7b2b8
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRlbGlpbmRpYUBnbWFpbC5jb20iLCJpZCI6IjY1NGYzZGI4Mzg5MGMzYTQ5ZGM3YjJiOCIsImlhdCI6MTY5OTcwNDQ1OSwiZXhwIjoxNjk5NzkwODU5fQ._VMyOePYNy0nVOCAXtVJpRNwtbcpWJpivGYwP51cESo
+Content-Type: application/json

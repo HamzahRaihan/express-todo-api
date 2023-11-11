@@ -27,3 +27,8 @@ Content-Type: application/json
   "todo": "Halo kedua telah diubah",
   "isComplete": true
 }
+
+### Delete Todo
+DELETE  https://express-todo-api-eta.vercel.app/todos/654f4b44f1287bcfc2f375d8
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRlbGlpbmRpYUBnbWFpbC5jb20iLCJpZCI6IjY1NGYzZGI4Mzg5MGMzYTQ5ZGM3YjJiOCIsImlhdCI6MTY5OTcwMzU2MywiZXhwIjoxNjk5Nzg5OTYzfQ.WILJLKOkRqEpqdnmeb-BTe3T3A8NFltA71cQLN1L_aI
+Content-Type: application/json
