@@ -4,6 +4,7 @@ Content-Type: application/json
 
 ### Get User by ID
 GET https://express-todo-api-eta.vercel.app/users/654e4014373a7a95337beff3
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRlbGlpbmRpYUBnbWFpbC5jb20iLCJpZCI6IjY1NGY3MjNjNjc3MTM1YmM0MWIwMTQ1ZSIsImlhdCI6MTY5OTcwNTQwNywiZXhwIjoxNjk5NzkxODA3fQ.rXz3UYNifywaSpP07Sxt_-ZafD1pV1j7e_vuEAlyxSo
 Content-Type: application/json
 
 ### Register
@@ -48,7 +49,7 @@ Content-Type: application/json
 
 ### Edit user data
 PUT https://express-todo-api-eta.vercel.app/users/654e2fa56941e1e7af6b1e02
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRlbGlpbmRpYUBnbWFpbC5jb20iLCJpZCI6IjY1NGYzZGI4Mzg5MGMzYTQ5ZGM3YjJiOCIsImlhdCI6MTY5OTY5MjAxOCwiZXhwIjoxNjk5Njk1NjE4fQ.uoRaD4oizdAgwvlsxXyEQoL6n2duUvI10eKVkunRLck
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRlbGlpbmRpYUBnbWFpbC5jb20iLCJpZCI6IjY1NGY3MjNjNjc3MTM1YmM0MWIwMTQ1ZSIsImlhdCI6MTY5OTcwNTQwNywiZXhwIjoxNjk5NzkxODA3fQ.rXz3UYNifywaSpP07Sxt_-ZafD1pV1j7e_vuEAlyxSo
 Content-Type: application/json
 
 {
@@ -58,6 +59,6 @@ Content-Type: application/json
 }
 
 ### Delete user data
-DELETE https://express-todo-api-eta.vercel.app/users/654f3db83890c3a49dc7b2b8
+DELETE https://express-todo-api-eta.vercel.app/users/654e4014373a7a95337beff3
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRlbGlpbmRpYUBnbWFpbC5jb20iLCJpZCI6IjY1NGYzZGI4Mzg5MGMzYTQ5ZGM3YjJiOCIsImlhdCI6MTY5OTcwNDQ1OSwiZXhwIjoxNjk5NzkwODU5fQ._VMyOePYNy0nVOCAXtVJpRNwtbcpWJpivGYwP51cESo
 Content-Type: application/json
