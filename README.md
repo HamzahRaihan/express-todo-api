@@ -1,3 +1,13 @@
+### Table of Content
+
+- [Todo API](#todo-api)
+  - [Feature](#feature)
+    - [User](#user)
+    - [Todo](#todo)
+  - [Authorization](#authorization)
+  - [Endpoint For Todos](#endpoint-for-todos)
+  - [Endpoint For Users](#endpoint-for-users)
+
 # Todo API
 
 This project was built using MongoDB, Express JS, and Mongoose. This documentation will describe to you how to use the API. There is a total of 11 Endpoints in this API.
@@ -21,7 +31,7 @@ This project was built using MongoDB, Express JS, and Mongoose. This documentati
 - Delete Todo
 - Edit Todo
 
-### Authorization
+## Authorization
 
 To authenticate an API request, you should provide your token key in the `Authorization` header.
 
@@ -29,7 +39,7 @@ To authenticate an API request, you should provide your token key in the `Author
 POST https://express-todo-api-eta.vercel.app/users/auth
 ```
 
-### Endpoint For Todos
+## Endpoint For Todos
 
 | Method   | Endpoint     | Description                                     |
 | -------- | ------------ | ----------------------------------------------- |
@@ -39,7 +49,7 @@ POST https://express-todo-api-eta.vercel.app/users/auth
 | `PUT`    | `/todos/:id` | `require authentication` Update/edit todo by id |
 | `DELETE` | `/todos/:id` | `require authentication` Delete todo data by id |
 
-### Endpoint For Users
+## Endpoint For Users
 
 | Method   | Endpoint      | Description                                     |
 | -------- | ------------- | ----------------------------------------------- |
