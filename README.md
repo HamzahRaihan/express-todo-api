@@ -18,11 +18,19 @@ This project was built using MongoDB, Express JS, and Mongoose. This readme will
 - Post New Todo
 - Edit Todo
 
+### Authorization
+
+To authenticate an API request, you should provide your token key in the `Authorization` header.
+
+```http
+GET /users/auth/login
+```
+
 ### Endpoint For Todo
 
-| Endpoint | Description                                           | Data Type                        |
-| -------- | ----------------------------------------------------- | -------------------------------- |
-| `GET`    | The total number of resources available from this api | integer                          |
-| `POST`   | The url for the next 'page' in the list               | string                           |
-| `PUT`    | The url for the previous page in the list             | boolean                          |
-| `DELETE` | The list of non-named api resources                   | list [APIResource](#apiresource) |
+| Method   | Endpoint     | Description            |
+| -------- | ------------ | ---------------------- |
+| `GET`    | `/todos`     | Get all todo data      |
+| `POST`   | `/todos`     | Create new todo        |
+| `PUT`    | `/todos/:id` | Update/edit todo by id |
+| `DELETE` | `/todos/:id` | Delete todo data by id |
