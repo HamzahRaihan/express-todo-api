@@ -1,0 +1,58 @@
+### Get All users data
+GET https://express-todo-api-eta.vercel.app/users
+Content-Type: application/json
+
+### Get User by ID
+GET https://express-todo-api-eta.vercel.app/users/654e4014373a7a95337beff3
+Content-Type: application/json
+
+### Register
+POST https://express-todo-api-eta.vercel.app/users
+Content-Type: application/json
+
+#condition: email must unique and password must be more than 8 length
+
+{
+  "name": "Webon Akhavari",
+  "email": "deliindia@gmail.com",
+  "password": "web132"
+}
+
+# {
+#   "name": "Ronaldi Jackson",
+#   "email": "ronald@gmail.com",
+#   "password": "123456780"
+# }
+
+### Login
+POST https://express-todo-api-eta.vercel.app/users/auth/login
+Content-Type: application/json
+
+# {
+#   "name": "Hamzah Raihan",
+#   "email": "hamzah@gmail.com",
+#   "password": "hamzahraihanpassword"
+# }
+
+{
+  "name": "Webon Akhavari",
+  "email": "deliindia@gmail.com",
+  "password": "web132"
+}
+
+# {
+#   "name": "Ronaldi Jackson",
+#   "email": "ronald@gmail.com",
+#   "password": "123456780"
+# }
+
+### Edit user data
+PUT https://express-todo-api-eta.vercel.app/users/654e2fa56941e1e7af6b1e02
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRlbGlpbmRpYUBnbWFpbC5jb20iLCJpZCI6IjY1NGYzZGI4Mzg5MGMzYTQ5ZGM3YjJiOCIsImlhdCI6MTY5OTY5MjAxOCwiZXhwIjoxNjk5Njk1NjE4fQ.uoRaD4oizdAgwvlsxXyEQoL6n2duUvI10eKVkunRLck
+Content-Type: application/json
+
+{
+  "name": "Hamzah Raihan",
+  "email": "hamzah@gmail.com",
+  "password": "hamzahraihanpassword"
+}

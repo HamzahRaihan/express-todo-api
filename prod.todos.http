@@ -1,0 +1,29 @@
+### Get All todos
+GET https://express-todo-api-eta.vercel.app//todos
+Content-Type: application/json
+
+### Post new Todo
+POST https://express-todo-api-eta.vercel.app//todos
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhhbXphaEBnbWFpbC5jb20iLCJpZCI6IjY1NGUyZmE1Njk0MWUxZTdhZjZiMWUwMiIsImlhdCI6MTY5OTY5MDU0OSwiZXhwIjoxNjk5Njk0MTQ5fQ.JPP4feH3_aGZThInBQOCOII8_7tOWIVCQI_ufyl0BDE
+Content-Type: application/json
+
+{
+  "todo": "Halo",
+  "IsComplete": false,
+  "userId": "654e2fa56941e1e7af6b1e02"
+}
+
+### Get Data by ID
+GET https://express-todo-api-eta.vercel.app//todos/654f386d87666723fedbc854
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhhbXphaEBnbWFpbC5jb20iLCJpZCI6IjY1NGUyZmE1Njk0MWUxZTdhZjZiMWUwMiIsImlhdCI6MTY5OTY5MDU0OSwiZXhwIjoxNjk5Njk0MTQ5fQ.JPP4feH3_aGZThInBQOCOII8_7tOWIVCQI_ufyl0BDE
+Content-Type: application/json
+
+### Edit Data
+PUT https://express-todo-api-eta.vercel.app//todos/654f29eb3636cb1d92125a71
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhhbXphaEBnbWFpbC5jb20iLCJpZCI6IjY1NGUyZmE1Njk0MWUxZTdhZjZiMWUwMiIsImlhdCI6MTY5OTY5MDU0OSwiZXhwIjoxNjk5Njk0MTQ5fQ.JPP4feH3_aGZThInBQOCOII8_7tOWIVCQI_ufyl0BDE
+Content-Type: application/json
+
+{
+  "todo": "Halo edited in vercel",
+  "isComplete": true
+}
