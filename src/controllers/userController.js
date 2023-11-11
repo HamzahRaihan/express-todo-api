@@ -72,8 +72,8 @@ const editUser = async (req, res) => {
     const id = req.params.id;
     const data = req.body;
     const user = await Users.findOne({ _id: id });
-    let saltRounds = 10;
 
+    let saltRounds = 10;
     const hashPassword = await new Promise((resolve, reject) => {
       bcrypt.hash(data.password, saltRounds, (err, hash) => {
         if (err) {
