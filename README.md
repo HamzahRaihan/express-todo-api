@@ -23,7 +23,7 @@ This project was built using MongoDB, Express JS, and Mongoose. This readme will
 To authenticate an API request, you should provide your token key in the `Authorization` header.
 
 ```http
-GET /users/auth/login
+GET https://express-todo-api-eta.vercel.app/users/auth/login
 ```
 
 ### Endpoint For Todo
