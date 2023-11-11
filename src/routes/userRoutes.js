@@ -5,7 +5,7 @@ const authChecker = require('../middleware/authChecker');
 const route = express.Router();
 
 route.get('/', getAllUsers);
-route.get('/:id', authChecker, getUserByID);
+route.get('/:id', getUserByID);
 route.post('/', register);
 route.put('/:id', authChecker, editUser);
 route.post('/auth/login', login);

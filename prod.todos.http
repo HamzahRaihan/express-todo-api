@@ -15,7 +15,6 @@ Content-Type: application/json
 
 ### Get Data by ID
 GET https://express-todo-api-eta.vercel.app/todos/654e4014373a7a95337beff3
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRlbGlpbmRpYUBnbWFpbC5jb20iLCJpZCI6IjY1NGYzZGI4Mzg5MGMzYTQ5ZGM3YjJiOCIsImlhdCI6MTY5OTY5NTM5NiwiZXhwIjoxNjk5NzgxNzk2fQ.nGr6xu4rmolRNAkrJ1Ne440ErBdp968aGJxJFx6eUcg
 Content-Type: application/json
 
 ### Edit Data
