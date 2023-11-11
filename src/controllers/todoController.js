@@ -39,7 +39,7 @@ const addTodo = async (req, res) => {
   try {
     const data = req.body;
     const user = await Users.findById(data.userId);
-    console.log('🚀 ~ file: todoController.js:43 ~ addTodo ~ user:', user);
+
     if (!user._id) {
       return res.status(404).json({
         message: 'User not found',
