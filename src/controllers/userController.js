@@ -102,25 +102,4 @@ const editUser = async (req, res) => {
   }
 };
 
-const deleteUser = async (req, res) => {
-  try {
-    const id = req.params.id;
-    const findUser = await Users.findOne({ _id: id });
-    const deleteUser = await findUser.deleteOne({ _id: id });
-
-    if (!deleteUser) {
-      return res.status(404).json({
-        message: 'User with ' + id + ' not found',
-      });
-    }
-
-    res.status(200).json({
-      message: 'User has been succesfully deleted',
-      deleteUser,
-    });
-  } catch (error) {
-    res.send('ID not found');
-  }
-};
-
-module.exports = { getAllUsers, getUserByID, register, editUser, deleteUser };
+module.exports = { getAllUsers, getUserByID, register, editUser };
