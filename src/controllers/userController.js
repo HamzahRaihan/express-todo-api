@@ -13,39 +13,25 @@ const getAllUsers = async (req, res) => {
   }
 };
 
-const login = async (req, res) => {
+const getUserByID = async (req, res) => {
   try {
-    const data = req.body;
-    console.log('🚀 ~ file: userController.js:19 ~ login ~ data:', data);
-    const user = await Users.findOne({ email: data.email });
-    console.log('🚀 ~ file: userController.js:20 ~ login ~ user:', user);
+    const { id } = req.params;
+    const user = await Users.findById(id).select('name email').exec();
 
     if (!user) {
-      res.status(401).json({
-        message: 'User not found',
+      return res.status(404).json({
+        message: 'User with id ' + id + ' not found',
       });
-      return;
     }
-    console.log(data.password, user.password);
 
-    bcrypt
-      .compare(data.password, user.password)
-      .then((result) => {
-        if (result) {
-          res.status(200).json({
-            message: 'Login Succesfully',
-          });
-        } else {
-          res.status(404).json({
-            message: 'Login failed ( Wrong Password )',
-          });
-        }
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    res.status(200).json({
+      message: 'Get user with id ' + id,
+      data: user,
+    });
   } catch (error) {
-    console.log(error.message);
+    res.status(500).json({
+      message: error.message,
+    });
   }
 };
 
@@ -86,7 +72,6 @@ const editUser = async (req, res) => {
     const id = req.params.id;
     const data = req.body;
     const user = await Users.findOne({ _id: id });
-    console.log('🚀 ~ file: userController.js:89 ~ editUser ~ user:', user);
     let saltRounds = 10;
 
     const hashPassword = await new Promise((resolve, reject) => {
@@ -117,4 +102,4 @@ const editUser = async (req, res) => {
   }
 };
 
-module.exports = { getAllUsers, register, login, editUser };
+module.exports = { getAllUsers, getUserByID, register, editUser };
