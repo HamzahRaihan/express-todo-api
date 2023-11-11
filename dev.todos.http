@@ -15,7 +15,6 @@ Content-Type: application/json
 
 ### Get todo by id
 GET http://localhost:3000/todos/654f386d87666723fedbc854
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRlbGlpbmRpYUBnbWFpbC5jb20iLCJpZCI6IjY1NGY3MjNjNjc3MTM1YmM0MWIwMTQ1ZSIsImlhdCI6MTY5OTcwNTQwNywiZXhwIjoxNjk5NzkxODA3fQ.rXz3UYNifywaSpP07Sxt_-ZafD1pV1j7e_vuEAlyxSo
 Content-Type: application/json
 
 ### Edit Todo

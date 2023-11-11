@@ -3,8 +3,7 @@ GET  http://localhost:3000/users
 Content-Type: application/json
 
 ### Get User by ID
-GET  http://localhost:3000/users/654e4014373a7a95337beff3
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRlbGlpbmRpYUBnbWFpbC5jb20iLCJpZCI6IjY1NGYzZGI4Mzg5MGMzYTQ5ZGM3YjJiOCIsImlhdCI6MTY5OTcwNDQ1OSwiZXhwIjoxNjk5NzkwODU5fQ._VMyOePYNy0nVOCAXtVJpRNwtbcpWJpivGYwP51cESo
+GET  http://localhost:3000/users/654e2fa56941e1e7af6b1e02
 Content-Type: application/json
 
 ### Register
@@ -25,7 +24,7 @@ Content-Type: application/json
 # }
 
 ### Login
-POST  http://localhost:3000/users/auth/login
+POST  http://localhost:3000/users/auth
 Content-Type: application/json
 
 # {

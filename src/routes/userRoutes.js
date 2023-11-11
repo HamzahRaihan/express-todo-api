@@ -8,7 +8,7 @@ route.get('/', getAllUsers);
 route.get('/:id', getUserByID);
 route.post('/', register);
 route.put('/:id', authChecker, editUser);
-route.post('/auth/login', login);
+route.post('/auth', login);
 route.delete('/:id', authChecker, deleteUser);
 
 module.exports = route;

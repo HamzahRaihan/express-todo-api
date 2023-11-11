@@ -25,7 +25,7 @@ Content-Type: application/json
 # }
 
 ### Login
-POST https://express-todo-api-eta.vercel.app/users/auth/login
+POST https://express-todo-api-eta.vercel.app/users/auth
 Content-Type: application/json
 
 # {
