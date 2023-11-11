@@ -11,6 +11,7 @@ const TodoSchema = new Schema(
     userId: {
       type: Schema.Types.ObjectId,
       ref: 'Users',
+      require: [true, 'User is not found'],
     },
     // image: { type: String },
   },

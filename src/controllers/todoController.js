@@ -1,4 +1,5 @@
 const Todos = require('../models/todos');
+const Users = require('../models/users');
 
 const getAllTodos = async (req, res) => {
   try {
@@ -37,6 +38,13 @@ const getTodosByID = async (req, res) => {
 const addTodo = async (req, res) => {
   try {
     const data = req.body;
+    const user = await Users.findById(data.userId);
+    console.log('🚀 ~ file: todoController.js:43 ~ addTodo ~ user:', user);
+    if (!user._id) {
+      return res.status(404).json({
+        message: 'User not found',
+      });
+    }
 
     const newTodos = {
       todo: data.todo,
@@ -50,7 +58,7 @@ const addTodo = async (req, res) => {
       addTodos,
     });
   } catch (error) {
-    res.send(error.message);
+    res.send('User not found');
   }
 };
 
