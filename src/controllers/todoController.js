@@ -77,4 +77,25 @@ const editTodos = async (req, res) => {
   }
 };
 
-module.exports = { getAllTodos, getTodosByID, addTodo, editTodos };
+const deleteTodo = async (req, res) => {
+  try {
+    const id = req.params.id;
+    const findTodo = await Todos.findOne({ _id: id });
+    const deleteTodo = await findTodo.deleteOne({ _id: id });
+
+    if (!deleteTodo) {
+      return res.status(404).json({
+        message: 'Todo with ' + id + ' not found',
+      });
+    }
+
+    res.status(200).json({
+      message: 'Todo has been succesfully deleted',
+      deleteTodo,
+    });
+  } catch (error) {
+    res.send('ID not found');
+  }
+};
+
+module.exports = { getAllTodos, getTodosByID, addTodo, editTodos, deleteTodo };
