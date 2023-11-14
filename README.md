@@ -54,6 +54,7 @@ POST https://express-todo-api-eta.vercel.app/users/auth
 | ------ | ------------- | ----------------------------------------------- |
 | `GET`  | `/users`      | Get all user data                               |
 | `GET`  | `/users/:id`  | Get user by id                                  |
+| `GET`  | `/:id/todos`  | Get todos by user                               |
 | `POST` | `/users`      | Create new user                                 |
 | `POST` | `/users/auth` | Account Login                                   |
 | `PUT`  | `/users/:id`  | `require authentication` Update/edit user by id |
