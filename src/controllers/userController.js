@@ -1,3 +1,4 @@
+const Todos = require('../models/todos');
 const Users = require('../models/users');
 const bcrypt = require('bcrypt');
 
@@ -27,6 +28,21 @@ const getUserByID = async (req, res) => {
     res.status(200).json({
       message: 'Get user with id ' + id,
       data: user,
+    });
+  } catch (error) {
+    res.status(500).json({
+      message: error.message,
+    });
+  }
+};
+
+const getTodoByUser = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const todos = await Todos.find({ userId: id });
+    res.status(200).json({
+      message: 'Get todo by user',
+      data: todos,
     });
   } catch (error) {
     res.status(500).json({
@@ -102,4 +118,4 @@ const editUser = async (req, res) => {
   }
 };
 
-module.exports = { getAllUsers, getUserByID, register, editUser };
+module.exports = { getAllUsers, getUserByID, getTodoByUser, register, editUser };

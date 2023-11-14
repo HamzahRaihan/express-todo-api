@@ -56,3 +56,6 @@ Content-Type: application/json
   "password": "hamzahraihanpassword"
 }
 
+### Get todos by user
+GET http://localhost:3000/users/6550b28c944d816f8629efc2/todos
+Content-Type: application/json
