@@ -72,6 +72,7 @@ const editTodos = async (req, res) => {
     const editedTodos = {
       todo: data.todo,
       isComplete: data.isComplete,
+      image: data.image,
     };
     const edited = await todos.updateOne(editedTodos);
 
