@@ -50,6 +50,7 @@ const addTodo = async (req, res) => {
       todo: data.todo,
       isComplete: false,
       userId: data.userId,
+      image: data.image,
     };
     const addTodos = await Todos.create(newTodos);
 

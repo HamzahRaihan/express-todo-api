@@ -13,7 +13,7 @@ const TodoSchema = new Schema(
       ref: 'Users',
       require: [true, 'User is not found'],
     },
-    // image: { type: String },
+    image: { type: String },
   },
   {
     timestamps: { currentTime: () => Date.now() },
